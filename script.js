@@ -15,9 +15,9 @@ if (passwordLength < 8 || passwordLength > 128) {
   return "";
 }
 
-// ask user for which characters to include
+// ask user what should password be made up of
 
-var includeLowerCase = confirm("Include lowercase lettres in password?");
+var includeLowerCase = confirm("Include lowercase letters in password?");
 var includeUpperCase = confirm("Include uppercase in password?");
 var includeNumbers = confirm("Include numbers in password?");
 var includeSpecialCharacters = confirm("Include special characters in password?");
@@ -30,6 +30,12 @@ if(!includeLowerCase && !includeUpperCase && !includeNumbers && !includeSpecialC
 
 //generate a random password
 let passwordCharacters = [];
+
+// options for users to pick from
+
+const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = "0123456789";
 const specialCharacters = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
 
