@@ -38,26 +38,34 @@ const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numbers = "0123456789";
 const specialCharacters = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
+// adds variable if user chooses to include it
 
-//handle other character types
+if(includeLowerCase) {
+  passwordCharacters = passwordCharacters.concat(lowerCase.split(""));
+}
 
-if (includeSpecialCharacters) {
+if(includeUpperCase) {
+  passwordCharacters = passwordCharacters.concat(upperCase.split(""));
+}
+
+if(includeNumbers) {
+  passwordCharacters = passwordCharacters.concat(numbers.split(""));
+}
+
+if(includeSpecialCharacters) {
   passwordCharacters = passwordCharacters.concat(specialCharacters.split(""));
 }
+
+// randomizes the added variables, and adds them to results, and returns results
 
 let results = "";
 for (var i = 0; passwordLength; i++) {
   let randomIndex = Math.floor(Math.random() * passwordCharacters.length);
   let randomCharacter = passwordCharacters[randomIndex];
   results += randomCharacter;
-
-  return results;
-
 }
 // return generated password
-
-
-
+return results;
 }
 
 // Write password to the #password input
