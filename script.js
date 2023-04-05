@@ -7,15 +7,18 @@ function generatePasssword() {
 
 // ask user for length
 let passwordLength = parseInt(prompt("How long should the password be?"));
-if (passwordLength < 8 && passwordLength > 128) {
-  alert("Error, invalid password length. \nPlease choose a password between 8-12 characters");
-  return ""
+
+// validate length
+
+if (passwordLength < 8 || passwordLength > 128) {
+  alert("Error, invalid password length. \nPlease choose a password greater than 8 and less than 128 characters");
+  return "";
 }
 
 // ask user for which characters to include
 
-var includeLowercase = confirm("Include lowercase lettres in password?");
-var includeUppercase = confirm("Include uppercase in password?");
+var includeLowerCase = confirm("Include lowercase lettres in password?");
+var includeUpperCase = confirm("Include uppercase in password?");
 var includeNumbers = confirm("Include numbers in password?");
 var includeSpecialCharacters = confirm("Include special characters in password?");
 
@@ -26,11 +29,11 @@ if(!includeLowerCase && !includeUpperCase && !includeNumbers && !includeSpecialC
 }
 
 //generate a random password
-let passworrdCharacters = [];
+let passwordCharacters = [];
 const specialCharacters = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
 
-//handloe other character types
+//handle other character types
 
 if (includeSpecialCharacters) {
   passwordCharacters = passwordCharacters.concat(specialCharacters.split(""));
