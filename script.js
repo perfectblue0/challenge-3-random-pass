@@ -1,16 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// debug and try out different methods?
+// function generates password
 
 function generatePassword() {
 
 // ask user for length
 let passwordLength = parseInt(prompt("How long should the password be?"));
-
-if (!passwordLength) {
-  alert("Error, please type in password length and click ok to generate password.");
-}
 
 // validate length
 
@@ -26,13 +22,13 @@ var includeUpperCase = confirm("Include uppercase in password?");
 var includeNumbers = confirm("Include numbers in password?");
 var includeSpecialCharacters = confirm("Include special characters in password?");
 
-//validate types of characters
-if(!includeLowerCase && !includeUpperCase && !includeNumbers && !includeSpecialCharacters) {
-  alert("Error, invalid character types. \nPlease include at least one type of character.");
+//validate types of characters and whether length was included
+if(!passwordLength && !includeLowerCase && !includeUpperCase && !includeNumbers && !includeSpecialCharacters) {
+  alert("Error, missing length and invalid character types. \nPlease include password length and at least one type of character.");
   return "";
 }
 
-//generate a random password
+//will store random characters, numbers, or/and letters
 let passwordCharacters = [];
 
 // options for users to pick from
@@ -71,6 +67,7 @@ for (var i = 0; i < passwordLength; i++) {
 
 // return generated password
 return results;
+
 }
 
 // Write password to the #password input
