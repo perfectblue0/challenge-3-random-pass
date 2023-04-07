@@ -9,6 +9,10 @@ I modified starter code in the JavaScript file to create an application that gen
 
 To use the application, first click the Generate Password button, then enter the password length, and choose what you would like to include in your password by selecting either OK or Cancel. You must enter a password length and must confirm one character type to generate a random password.
 
+The link to the application is:
+
+https://perfectblue0.github.io/challenge-3-random-pass/
+
 ![view of application with a randomnly generated password](./assets/random-pword-pic.png)
 
 

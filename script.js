@@ -10,7 +10,7 @@ let passwordLength = parseInt(prompt("How long should the password be?"));
 
 // validate length
 
-if (passwordLength < 8 || passwordLength > 128) {
+if (passwordLength < 8 || passwordLength > 128 || !passwordLength) {
   alert("Error, invalid password length. \nPlease choose a password greater than 8 and less than 128 characters.");
   return "";
 }
@@ -23,8 +23,8 @@ var includeNumbers = confirm("Include numbers in password?");
 var includeSpecialCharacters = confirm("Include special characters in password?");
 
 //validate types of characters and whether length was included
-if(!passwordLength && !includeLowerCase && !includeUpperCase && !includeNumbers && !includeSpecialCharacters) {
-  alert("Error, missing length and invalid character types. \nPlease include password length and at least one type of character.");
+if(!includeLowerCase && !includeUpperCase && !includeNumbers && !includeSpecialCharacters) {
+  alert("Error, invalid character types. \nPlease include at least one type of character.");
   return "";
 }
 
