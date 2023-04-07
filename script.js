@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // debug and try out different methods?
 
-function generatePasssword() {
+function generatePassword() {
 
 // ask user for length
 let passwordLength = parseInt(prompt("How long should the password be?"));
@@ -11,7 +11,7 @@ let passwordLength = parseInt(prompt("How long should the password be?"));
 // validate length
 
 if (passwordLength < 8 || passwordLength > 128) {
-  alert("Error, invalid password length. \nPlease choose a password greater than 8 and less than 128 characters");
+  alert("Error, invalid password length. \nPlease choose a password greater than 8 and less than 128 characters.");
   return "";
 }
 
@@ -59,11 +59,12 @@ if(includeSpecialCharacters) {
 // randomizes the added variables, and adds them to results, and returns results
 
 let results = "";
-for (var i = 0; passwordLength; i++) {
+for (var i = 0; i < passwordLength; i++) {
   let randomIndex = Math.floor(Math.random() * passwordCharacters.length);
   let randomCharacter = passwordCharacters[randomIndex];
   results += randomCharacter;
 }
+
 // return generated password
 return results;
 }
