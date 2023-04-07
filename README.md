@@ -19,7 +19,7 @@ https://perfectblue0.github.io/challenge-3-random-pass/
 
 ## Credits
 
-The starter code was provided by UCB Coding Bootcamp
+The starter code was provided by UCB Coding Bootcamp. Part of the code was created by Samantha Randoph which had given students a tutorial on how to get started with the project.
 
 
 
