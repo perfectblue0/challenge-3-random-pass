@@ -8,6 +8,10 @@ function generatePassword() {
 // ask user for length
 let passwordLength = parseInt(prompt("How long should the password be?"));
 
+if (!passwordLength) {
+  alert("Error, please type in password length and click ok to generate password.");
+}
+
 // validate length
 
 if (passwordLength < 8 || passwordLength > 128) {
